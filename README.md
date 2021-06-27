@@ -31,7 +31,28 @@ Ultimately the choosing of the quality flag is up to discretion of interpreter.
 If the interpreter would like a different flag for the subset, simply replace the '==1' with another number. e.g. '==n'
 ii=np.array((df4['temp_flg'] == n) & (df4['sal_flg'] == n) & (df4['fluor_flg'] == n) & (df4['ph_flg'] == n) & (df4['nitrate_flg'] == n) & (df4['do2_flg'] == n))
 
-4. Sources and Thank You's!
+
+3. Data Matrix (Corr and Cov)
+
+Creating a new data frame with good flag data and creating a data matrix create (2d array where each column is a variable) that standardizes the data is again under the discretion of the interpreter. Use cells as needed and check the shape of the data with np.shape(). 
+
+4. Factor Loading/Factor Loading Plot
+
+ The columns of this new A matrix are called the factor loadings for each principal component. These new axes we are going to be looking at are based off of waves, winds and tides.The factor loadings define those axes - both the orientation (eigenvector) and the spread of the data across each axis (square root of eigenvalue - which describes the standard deviation).
+ 
+ For the plot, plug in variables as needed. 
+ 
+ 5. Principal Component Score
+ 
+ This is the projection of each data vector onto new component axes. It is the new variables created from the original data, based on rotating axes. Each principal component score can be thought of as an "index" of variability in the data. 
+ 
+ 6. Time Series for PC's
+ 
+ These last time series that can be made with 'tau[:,n]' are looking at how the variables vary together in time. Just replace the n with component. 
+ 
+ e.g plt.plot(tau[:,1]), is a time series for Principal Component 1
+
+7. Sources and Thank You's!
  
  Thank you to Dr. Tom Connolly, Jason Adelaars, CeNCOOS for their funding and all others that helped with files and Shore Station Data. 
  "The collection and curation of Moss Landing Marine Lab’s (MLML) public data, and the knowledge derived from it, extends the use and value of our research results. Since establishment in 1966, MLML has grown an international reputation for excellence in marine science research and education, and is the second oldest marine lab in the Monterey Bay area. Our public data repositories hold vast quantities of data collected over the course of our 50 year history by Graduate Students, Faculty, and Research Affiliates in subject areas such as Oceanography (CenCOOS, MoBY) and Marine Vertebrate sightings, strandings and mortalities along the Pacific Coast (BeachCOMBERS)."
