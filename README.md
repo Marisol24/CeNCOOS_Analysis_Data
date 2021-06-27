@@ -31,7 +31,7 @@ Ultimately the choosing of the quality flag is up to discretion of interpreter.
 If the interpreter would like a different flag for the subset, simply replace the '==1' with another number. e.g. '==n'
 ii=np.array((df4['temp_flg'] == n) & (df4['sal_flg'] == n) & (df4['fluor_flg'] == n) & (df4['ph_flg'] == n) & (df4['nitrate_flg'] == n) & (df4['do2_flg'] == n))
 
-Sources and Thank You's!
+4. Sources and Thank You's!
  
  Thank you to Dr. Tom Connolly, Jason Adelaars, CeNCOOS for their funding and all others that helped with files and Shore Station Data. 
  "The collection and curation of Moss Landing Marine Lab’s (MLML) public data, and the knowledge derived from it, extends the use and value of our research results. Since establishment in 1966, MLML has grown an international reputation for excellence in marine science research and education, and is the second oldest marine lab in the Monterey Bay area. Our public data repositories hold vast quantities of data collected over the course of our 50 year history by Graduate Students, Faculty, and Research Affiliates in subject areas such as Oceanography (CenCOOS, MoBY) and Marine Vertebrate sightings, strandings and mortalities along the Pacific Coast (BeachCOMBERS)."
