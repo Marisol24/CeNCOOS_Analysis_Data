@@ -30,3 +30,20 @@ Ultimately the choosing of the quality flag is up to discretion of interpreter.
 
 If the interpreter would like a different flag for the subset, simply replace the '==1' with another number. e.g. '==n'
 ii=np.array((df4['temp_flg'] == n) & (df4['sal_flg'] == n) & (df4['fluor_flg'] == n) & (df4['ph_flg'] == n) & (df4['nitrate_flg'] == n) & (df4['do2_flg'] == n))
+
+Sources and Thank You's!
+ 
+ Thank you to Dr. Tom Connolly, Jason Adelaars, CeNCOOS for their funding and all others that helped with files and Shore Station Data. 
+ "The collection and curation of Moss Landing Marine Lab’s (MLML) public data, and the knowledge derived from it, extends the use and value of our research results. Since establishment in 1966, MLML has grown an international reputation for excellence in marine science research and education, and is the second oldest marine lab in the Monterey Bay area. Our public data repositories hold vast quantities of data collected over the course of our 50 year history by Graduate Students, Faculty, and Research Affiliates in subject areas such as Oceanography (CenCOOS, MoBY) and Marine Vertebrate sightings, strandings and mortalities along the Pacific Coast (BeachCOMBERS)."
+ 
+MLML Public Data Portal: http://pubdata.mlml.calstate.edu/index.php
+
+CeNCOOS Website: https://www.cencoos.org/
+
+1.	Booth, J. Ashley T. et al. “Natural Intrusions of Hypoxic, Low PH Water into Nearshore Marine Environments on the California Coast.” Continental Shelf Research 45 (2012): 108–115. Continental Shelf Research. Web.
+
+2.	Ryan, J. P. et al. “Causality of an Extreme Harmful Algal Bloom in Monterey Bay, California, during the 2014–2016 Northeast Pacific Warm Anomaly.” Geophysical Research Letters 44.11 (2017): 5571–5579. Geophysical Research Letters. Web.
+
+3.	Timothy Pennington, J., and Francisco P. Chavez. “Seasonal Fluctuations of Temperature, Salinity, Nitrate, Chlorophyll and Primary Production at Station H3/M1 over 1989-1996 in Monterey Bay, California.” Deep-Sea Research Part II: Topical Studies in Oceanography 47.5–6 (2000): 947–973. Deep-Sea Research Part II: Topical Studies in Oceanography. Web.
+
+4. William J. Emery, Richard E. Thomson, Chapter 5 - Time-series Analysis Methods, Editor(s): William J. Emery, Richard E. Thomson, Data Analysis Methods in Physical Oceanography, Elsevier Science, 2001, Pages 371-567, ISBN 9780444507563, https://doi.org/10.1016/B978-044450756-3/50006-X.
