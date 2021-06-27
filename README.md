@@ -1,5 +1,21 @@
 # CeNCOOS_Analysis_Data so far, 6-27-2021
 
+Background Information
+
+There is a Scientific and Industrial Seawater and Intake Pipe that brings in water from the bay, as seen below in Figure 1 and then dispersed throughout MLML, MBARI and Phil's Restaurant for various purposes. The water is brought through the pump house (the pump house located just onshore of the intake pipe) where the sensors and oceanographic instruments are all housed and maintained.  All instruments are configured in such (e.g raspberry pies) so that the oceanographic information being collected can then be read into a computer and be seen on the MLML public data portal interface as time series data in real time.
+
+The data sets used represent seawater data collected from 2010-2018 at the Moss Landing shore station managed by Moss Landing Marine Laboratories. These datasets are comprised of temperature, conductivity, salinity, chlorophyll fluorescence, beam attenuation, transmission, dissolved oxygen, dissolved oxygen saturation, and pH. Data are provided by month in comma-separated value (csv) format. Processed quality-controlled data for each year are archived in binary NetCDF format which is the format I will be using in this project. 
+
+This data was collected with help by CenCOOs, which is the Central and Northern California Ocean Observing System. This is a collaborative effort that “…enables sustained and coordinated measures, model nowcasts and forecasts, and integrated products to inform decisions about our regional ocean."
+
+This shore station time series data is important because knowing what the bay’s rhythms are may help describe overall trends and patterns of the organisms that live in the bay. It can also aid scientists and policy makers about what future work needs to be done in order to best preserve the bay as well. Looking at and exploring trends in time series is almost like detective work where you have patterns and you need to look at them to find out what’s actually happening below the surface in such a complex system. Knowing what happens in terms of these parameters can inform biologists of blooms or it can let people at MLML know when there is a possible big anoxic event about to occur (e.g. to switch tanks for experiments being done in the aquarium if it will be harmful to animals). 
+
+
+
+
+
+
+
 Raw data used in this Notebook is from: http://pubdata.mlml.calstate.edu/seawater/index.php and from MLML Shore Station Data>Moss_Landing>netcdf https://drive.google.com/drive/u/3/folders/1kHGUe0LtATtH5veMkt-f35pgTuz2AGWZ
 
 My GitHub repository is: https://github.com/Marisol24
