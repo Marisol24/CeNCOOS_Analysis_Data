@@ -1,31 +1,29 @@
 # CeNCOOS_Analysis_Data updated, 4/17/2022
 
-Background Information
+**Background Information**
 
 There is a Scientific and Industrial Seawater and Intake Pipe that brings in water from the bay, as seen below in Figure 1 and then dispersed throughout MLML, MBARI and Phil's Restaurant for various purposes. The water is brought through the pump house (the pump house located just onshore of the intake pipe) where the sensors and oceanographic instruments are all housed and maintained.  All instruments are configured in such (e.g raspberry pies) so that the oceanographic information being collected can then be read into a computer and be seen on the MLML public data portal interface as time series data in real time.
 
-The data sets used represent seawater data collected from 2010-2019, (2020 not in use due to the COVID-19 Pandemic) and 2021 at the Moss Landing shore station managed by Moss Landing Marine Laboratories. These datasets are comprised of temperature, conductivity, salinity, chlorophyll fluorescence, beam attenuation, transmission, dissolved oxygen, dissolved oxygen saturation, and pH. Data are provided by month in comma-separated value (csv) format. Processed quality-controlled data for each year are archived in binary NetCDF format which is the format I will be using in this project. 
+The data sets used represent seawater data collected from 2010-2019, (2020 not in use due to the COVID-19 Pandemic) and 2021 at the Moss Landing shore station managed by Moss Landing Marine Laboratories. These datasets are comprised of: Temperature, Conductivity, Salinity, Chlorophyll Fluorescence, Beam attenuation, Transmission, Dissolved Oxygen, Dissolved Oxygen Saturation, and pH. Data are provided by month in comma-separated value (csv) format. Processed quality-controlled data for each year are archived in binary NetCDF format which is the format that is currently being used in this project. 
 
-This data was collected with help by CenCOOs, which is the Central and Northern California Ocean Observing System. This is a collaborative effort that “…enables sustained and coordinated measures, model nowcasts and forecasts, and integrated products to inform decisions about our regional ocean."
+This data was collected with help from CenCOOs (Central and Northern California Ocean Observing System). This is a collaborative effort that “…enables sustained and coordinated measures, model nowcasts and forecasts, and integrated products to inform decisions about our regional ocean."
 
-This shore station time series data is important because knowing what the bay’s rhythms are may help describe overall trends and patterns of the organisms that live in the bay. It can also aid scientists and policy makers about what future work needs to be done in order to best preserve the bay as well. Looking at and exploring trends in time series is almost like detective work where you have patterns and you need to look at them to find out what’s actually happening below the surface in such a complex system. Knowing what happens in terms of these parameters can inform biologists of blooms or it can let people at MLML know when there is a possible big anoxic event about to occur (e.g. to switch tanks for experiments being done in the aquarium if it will be harmful to animals). 
+**Useful Links and File Pathways:**
 
+*Note*:Proceed with caution when using Data from March 2020-March 2021, during the pandemic the instruments were unavailable for standard weekly cleaning and maintenance.
 
+All raw data used in this analysis are provided by month in comma-separated value (csv) format on MLML Public Data Portal with all Seawater Intake Historical Text Data: September 2010-Present.  http://pubdata.mlml.calstate.edu/seawater/index.php. 
 
+Processed quality-controlled data for each year are archived in binary NetCDF format. Path and link below. Must request access from Dr. Tom Connolly. Github:tompc35
 
+MLML Shore Station Data>Moss_Landing>netcdf https://drive.google.com/drive/u/3/folders/1kHGUe0LtATtH5veMkt-f35pgTuz2AGWZ
 
+My GitHub repository: https://github.com/Marisol24
+Path: Marisol24->Repositories->CeNCOOS_Analysis_Data->Data
 
+CeNCOOS Website: https://www.cencoos.org/
 
-Raw data used in this Notebook is from: http://pubdata.mlml.calstate.edu/seawater/index.php and from MLML Shore Station Data>Moss_Landing>netcdf https://drive.google.com/drive/u/3/folders/1kHGUe0LtATtH5veMkt-f35pgTuz2AGWZ
-
-My GitHub repository is: https://github.com/Marisol24
-And the path is Marisol24->Repositories->CeNCOOS_Analysis_Data->Data
-
-These datasets are comprised of temperature, conductivity, salinity, chlorophyll fluorescence, beam attenuation, transmission, dissolved oxygen, dissolved oxygen saturation, nitrate, and pH. 
-Data are provided by month in comma-separated value (csv) format on http://pubdata.mlml.calstate.edu/seawater/index.php. Processed quality-controlled data for each year are archived in binary NetCDF format which is what is used for this project. 
-MLML Public Data Portal with all Seawater Intake Historical Text Data: September 2010-Present(excluding Cornona Virus Shutdown). Proceed with caution and use meticulous QC when using Data from March 2020-March 2021, during the pandemic the instruments were unavailable for standard weekly cleaning and maintenance. 
-
-Steps to run on a different computer:
+**Steps to run on a different computer:**
 
 1. MLML Shore Station Data>Moss_Landing>netcdf https://drive.google.com/drive/u/3/folders/1kHGUe0LtATtH5veMkt-f35pgTuz2AGWZ
 
@@ -35,17 +33,17 @@ Import all functions
 
 2. Follow Data Exploration
 
-All data explorations are with raw data at first to look at general trends and if there is any lag/issues/oceanographic instrumentation drift.
+All data explorations in this notebook are preliminary graphs are visualized raw data to look at general trends and if there is any lag/issues/oceanographic instrumentation drift.
 Use cells as needed to check specific years as needed. 
 
 3. Subsetting with Flags
 
- The netcdf files used in this project are processed quality-controlled data for each year and archived in binary NetCDF. The flag is represenative of a quality flag indicating data that has no problems based on processed quality contol. The flag used for this project is ==1. 
+ The netcdf files used in this project are processed quality-controlled data for each year and archived in binary NetCDF. The flag is represenative of a quality flag indicating data that has no problems based on processed quality contol. The flags used for this project is ==1 noting data is 'good' data. 
 
 Ultimately the choosing of the quality flag is up to discretion of interpreter.
 
 If the interpreter would like a different flag for the subset, simply replace the '==1' with another number. e.g. '==n'
-i.e. data array with all qc lags as '==1' 
+i.e. data array with all qc flags as '==1' 
 ii=np.array((df4['temp_flg'] == n) & (df4['sal_flg'] == n) & (df4['fluor_flg'] == n) & (df4['ph_flg'] == n) & (df4['nitrate_flg'] == n) & (df4['do2_flg'] == n))
 
 
@@ -65,18 +63,18 @@ Creating a new data frame with good flag data and creating a data matrix create 
  
  6. Time Series for PC's
  
- These last time series that can be made with 'tau[:,n]' are looking at how the variables vary together in time. Just replace the n with component. 
+ These time series that can be made with 'tau[:,n]' if are looking at how the variables vary together in time. Just replace the n with component as needed. 
  
- e.g plt.plot(tau[:,1]), is a time series for Principal Component 1
+ e.g plt.plot(tau[:,1]), is a time series for Principal Component '1'
+ 
+  7. Peiodograms and Periodogram CI's
 
-7. Sources and Thank You's!
+ These are examples of temperature periodograms. The use of window is up the to direction of the interpreter. Use 'ylim' as necessary to focus in or significant peaks in periodogram. 
+
+**Sources and Thank You's!**
  
  Thank you to Dr. Tom Connolly, Jason Adelaars, Steven Cunningham, and CeNCOOS for their funding and all others that helped with files and Shore Station Data. 
  "The collection and curation of Moss Landing Marine Lab’s (MLML) public data, and the knowledge derived from it, extends the use and value of our research results. Since establishment in 1966, MLML has grown an international reputation for excellence in marine science research and education, and is the second oldest marine lab in the Monterey Bay area. Our public data repositories hold vast quantities of data collected over the course of our 50 year history by Graduate Students, Faculty, and Research Affiliates in subject areas such as Oceanography (CenCOOS, MoBY) and Marine Vertebrate sightings, strandings and mortalities along the Pacific Coast (BeachCOMBERS)."
- 
-MLML Public Data Portal: http://pubdata.mlml.calstate.edu/index.php
-
-CeNCOOS Website: https://www.cencoos.org/
 
 Sources that have aided in the interpretations of this data:
 
