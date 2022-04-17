@@ -23,7 +23,7 @@ And the path is Marisol24->Repositories->CeNCOOS_Analysis_Data->Data
 
 These datasets are comprised of temperature, conductivity, salinity, chlorophyll fluorescence, beam attenuation, transmission, dissolved oxygen, dissolved oxygen saturation, nitrate, and pH. 
 Data are provided by month in comma-separated value (csv) format on http://pubdata.mlml.calstate.edu/seawater/index.php. Processed quality-controlled data for each year are archived in binary NetCDF format which is what is used for this project. 
-MLML Public Data Portal with all Seawater Intake Historical Text Data: September 2010-Present(excluding Cornona Virus Shutdown). Procees with Caution when using Data from March 2020 onward.
+MLML Public Data Portal with all Seawater Intake Historical Text Data: September 2010-Present(excluding Cornona Virus Shutdown). Proceed with caution and use meticulous QC when using Data from March 2020-March 2021, during the pandemic the instruments were unavailable for standard weekly cleaning and maintenance. 
 
 Steps to run on a different computer:
 
@@ -45,6 +45,7 @@ Use cells as needed to check specific years as needed.
 Ultimately the choosing of the quality flag is up to discretion of interpreter.
 
 If the interpreter would like a different flag for the subset, simply replace the '==1' with another number. e.g. '==n'
+i.e. data array with all qc lags as '==1' 
 ii=np.array((df4['temp_flg'] == n) & (df4['sal_flg'] == n) & (df4['fluor_flg'] == n) & (df4['ph_flg'] == n) & (df4['nitrate_flg'] == n) & (df4['do2_flg'] == n))
 
 
@@ -54,7 +55,7 @@ Creating a new data frame with good flag data and creating a data matrix create 
 
 4. Factor Loading/Factor Loading Plot
 
- The columns of this new A matrix are called the factor loadings for each principal component. These new axes we are going to be looking at are based off of waves, winds and tides.The factor loadings define those axes - both the orientation (eigenvector) and the spread of the data across each axis (square root of eigenvalue - which describes the standard deviation).
+ The columns of this new 'A' matrix are called the factor loadings for each principal component. These new axes we are going to be looking at are based off of waves, winds and tides.The factor loadings define those axes - both the orientation (eigenvector) and the spread of the data across each axis (square root of eigenvalue - which describes the standard deviation).
  
  For the plot, plug in variables as needed. 
  
@@ -70,12 +71,14 @@ Creating a new data frame with good flag data and creating a data matrix create 
 
 7. Sources and Thank You's!
  
- Thank you to Dr. Tom Connolly, Jason Adelaars, CeNCOOS for their funding and all others that helped with files and Shore Station Data. 
+ Thank you to Dr. Tom Connolly, Jason Adelaars, Steven Cunningham, and CeNCOOS for their funding and all others that helped with files and Shore Station Data. 
  "The collection and curation of Moss Landing Marine Lab’s (MLML) public data, and the knowledge derived from it, extends the use and value of our research results. Since establishment in 1966, MLML has grown an international reputation for excellence in marine science research and education, and is the second oldest marine lab in the Monterey Bay area. Our public data repositories hold vast quantities of data collected over the course of our 50 year history by Graduate Students, Faculty, and Research Affiliates in subject areas such as Oceanography (CenCOOS, MoBY) and Marine Vertebrate sightings, strandings and mortalities along the Pacific Coast (BeachCOMBERS)."
  
 MLML Public Data Portal: http://pubdata.mlml.calstate.edu/index.php
 
 CeNCOOS Website: https://www.cencoos.org/
+
+Sources that have aided in the interpretations of this data:
 
 1.	Booth, J. Ashley T. et al. “Natural Intrusions of Hypoxic, Low PH Water into Nearshore Marine Environments on the California Coast.” Continental Shelf Research 45 (2012): 108–115. Continental Shelf Research. Web.
 
