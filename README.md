@@ -15,7 +15,8 @@ This data was collected with help from CenCOOs (Central and Northern California 
 
 All raw data used in this analysis are provided by month in comma-separated value (csv) format on MLML Public Data Portal with all Seawater Intake Historical Text Data: September 2010-Present.  http://pubdata.mlml.calstate.edu/seawater/index.php. 
 
-Processed quality-controlled data for each year are archived in binary NetCDF format. Path and link below. Must request access from Dr. Tom Connolly. Github:tompc35
+Processed quality-controlled data for each year are archived in binary NetCDF format. Path and link below. 
+Must request access from Dr. Tom Connolly. Github:tompc35
 
 MLML Shore Station Data>Moss_Landing>netcdf https://drive.google.com/drive/u/3/folders/1kHGUe0LtATtH5veMkt-f35pgTuz2AGWZ
 
@@ -70,7 +71,18 @@ Creating a new data frame with good flag data and creating a data matrix create 
  
   7. Peiodograms and Periodogram CI's
 
- These are examples of temperature periodograms. The use of window is up the to direction of the interpreter. Use 'ylim' as necessary to focus in or significant peaks in periodogram. 
+These are examples of temperature periodograms. The use of window is up the to direction of the interpreter. Use 'ylim' as necessary to focus in or significant peaks in periodogram. 
+ 
+ 8. Wind Roses
+
+Packages:
+1. %matplotlib inline 
+2. from matplotlib import pyplot as plt
+3. import matplotlib.cm as cm 
+4. from math import pi 
+5. !pip install windrose openpyxl
+6. from windrose import WindroseAxes
+
 
 **Sources and Thank You's!**
  
