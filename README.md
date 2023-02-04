@@ -17,7 +17,6 @@ Processed quality-controlled data for each year are archived in binary NetCDF fo
 
 MLML Shore Station Data>Moss_Landing>netcdf https://drive.google.com/drive/u/3/folders/1kHGUe0LtATtH5veMkt-f35pgTuz2AGWZ
 
-
 **Useful Links and File Pathways:**
 
 *Note*:Proceed with caution when using Data from March 2020-March 2021, during the pandemic the instruments were unavailable for standard weekly cleaning and maintenance.
@@ -25,65 +24,6 @@ MLML Shore Station Data>Moss_Landing>netcdf https://drive.google.com/drive/u/3/f
 
 My GitHub repository: https://github.com/Marisol24
 Path: Marisol24->Repositories->CeNCOOS_Analysis_Data->Data
-
-**Steps to run on a different computer:**
-
-1. MLML Shore Station Data>Moss_Landing>netcdf https://drive.google.com/drive/u/3/folders/1kHGUe0LtATtH5veMkt-f35pgTuz2AGWZ
-
-Visit this drive, select net cdf files as needed. Save into local folder where you can access with Jupyter Lab or other data analysis software. 
-
-Import all functions
-
-2. Follow Data Exploration
-
-All data explorations in this notebook are preliminary graphs are visualized raw data to look at general trends and if there is any lag/issues/oceanographic instrumentation drift.
-Use cells as needed to check specific years as needed. 
-
-3. Subsetting with Flags
-
- The netcdf files used in this project are processed quality-controlled data for each year and archived in binary NetCDF. The flag is represenative of a quality flag indicating data that has no problems based on processed quality contol. The flags used for this project is ==1 noting data is 'good' data. 
-
-Ultimately the choosing of the quality flag is up to discretion of interpreter.
-
-If the interpreter would like a different flag for the subset, simply replace the '==1' with another number. e.g. '==n'
-i.e. data array with all qc flags as '==1' 
-ii=np.array((df4['temp_flg'] == n) & (df4['sal_flg'] == n) & (df4['fluor_flg'] == n) & (df4['ph_flg'] == n) & (df4['nitrate_flg'] == n) & (df4['do2_flg'] == n))
-
-
-3. Data Matrix (Corr and Cov)
-
-Creating a new data frame with good flag data and creating a data matrix create (2d array where each column is a variable) that standardizes the data is again under the discretion of the interpreter. Use cells as needed and check the shape of the data with np.shape(). 
-
-4. Factor Loading/Factor Loading Plot
-
- The columns of this new 'A' matrix are called the factor loadings for each principal component. These new axes we are going to be looking at are based off of waves, winds and tides.The factor loadings define those axes - both the orientation (eigenvector) and the spread of the data across each axis (square root of eigenvalue - which describes the standard deviation).
- 
- For the plot, plug in variables as needed. 
- 
- 5. Principal Component Score
- 
- This is the projection of each data vector onto new component axes. It is the new variables created from the original data, based on rotating axes. Each principal component score can be thought of as an "index" of variability in the data. 
- 
- 6. Time Series for PC's
- 
- These time series that can be made with 'tau[:,n]' if are looking at how the variables vary together in time. Just replace the n with component as needed. 
- 
- e.g plt.plot(tau[:,1]), is a time series for Principal Component '1'
- 
-  7. Peiodograms and Periodogram CI's
-
-These are examples of temperature periodograms. The use of window is up the to direction of the interpreter. Use 'ylim' as necessary to focus in or significant peaks in periodogram. 
- 
- 8. Wind Roses
-
-Packages:
-1. %matplotlib inline 
-2. from matplotlib import pyplot as plt
-3. import matplotlib.cm as cm 
-4. from math import pi 
-5. !pip install windrose openpyxl
-6. from windrose import WindroseAxes
-
 
 **Sources and Thank You's!**
  
