@@ -1,29 +1,29 @@
 # CeNCOOS Analysis Data 
- Last Updated: 6/03/2022
+ Last Updated: 2/03/2023
 
 **Background Information**
+The data sets for this project contain seawater data collected from 2010-2021 (2020 not in use due to the COVID-19 Pandemic) at the Moss Landing shore station managed by Moss Landing Marine Laboratories, and collected with help from CenCOOs (Central and Northern California Ocean Observing System). This is a collaborative effort that “…enables sustained and coordinated measures, model nowcasts and forecasts, and integrated products to inform decisions about our regional ocean."
 
-There is a Scientific and Industrial Seawater and Intake Pipe that brings in water from the bay, as seen below in Figure 1 and then dispersed throughout MLML, MBARI and Phil's Restaurant for various purposes. The water is brought through the pump house (the pump house located just onshore of the intake pipe) where the sensors and oceanographic instruments are all housed and maintained.  All instruments are configured in such (e.g raspberry pies) so that the oceanographic information being collected can then be read into a computer and be seen on the MLML public data portal interface as time series data in real time.
+CeNCOOS Website: https://www.cencoos.org/
 
-The data sets used represent seawater data collected from 2010-2019, (2020 not in use due to the COVID-19 Pandemic) and 2021 at the Moss Landing shore station managed by Moss Landing Marine Laboratories. These datasets are comprised of: Temperature, Conductivity, Salinity, Chlorophyll Fluorescence, Beam attenuation, Transmission, Dissolved Oxygen, Dissolved Oxygen Saturation, and pH. Data are provided by month in comma-separated value (csv) format. Processed quality-controlled data for each year are archived in binary NetCDF format which is the format that is currently being used in this project. 
+These datasets are comprised of: Temperature, Conductivity, Salinity, Chlorophyll Fluorescence, Beam attenuation, Transmission, Dissolved Oxygen, Dissolved Oxygen Saturation, and pH. 
 
-This data was collected with help from CenCOOs (Central and Northern California Ocean Observing System). This is a collaborative effort that “…enables sustained and coordinated measures, model nowcasts and forecasts, and integrated products to inform decisions about our regional ocean."
+Data are provided by month in comma-separated value (csv) format on the MLML Seawater Intake Public Data Portal.Data Portal with Seawater Intake Historical Text Data:
+
+ September 2010-Present: http://pubdata.mlml.calstate.edu/seawater/index.php. 
+
+Processed quality-controlled data for each year are archived in binary NetCDF format (format currently used in this project). Path and link below. Must request access from Dr. Thomas  Connolly. Github:tompc35
+
+MLML Shore Station Data>Moss_Landing>netcdf https://drive.google.com/drive/u/3/folders/1kHGUe0LtATtH5veMkt-f35pgTuz2AGWZ
+
 
 **Useful Links and File Pathways:**
 
 *Note*:Proceed with caution when using Data from March 2020-March 2021, during the pandemic the instruments were unavailable for standard weekly cleaning and maintenance.
 
-All raw data used in this analysis are provided by month in comma-separated value (csv) format on MLML Public Data Portal with all Seawater Intake Historical Text Data: September 2010-Present.  http://pubdata.mlml.calstate.edu/seawater/index.php. 
-
-Processed quality-controlled data for each year are archived in binary NetCDF format. Path and link below. 
-Must request access from Dr. Tom Connolly. Github:tompc35
-
-MLML Shore Station Data>Moss_Landing>netcdf https://drive.google.com/drive/u/3/folders/1kHGUe0LtATtH5veMkt-f35pgTuz2AGWZ
 
 My GitHub repository: https://github.com/Marisol24
 Path: Marisol24->Repositories->CeNCOOS_Analysis_Data->Data
-
-CeNCOOS Website: https://www.cencoos.org/
 
 **Steps to run on a different computer:**
 
@@ -92,10 +92,12 @@ Packages:
 
 Sources that have aided in the interpretations of this data:
 
-1.	Booth, J. Ashley T. et al. “Natural Intrusions of Hypoxic, Low PH Water into Nearshore Marine Environments on the California Coast.” Continental Shelf Research 45 (2012): 108–115. Continental Shelf Research. Web.
+1.Booth, J. Ashley T. et al. “Natural Intrusions of Hypoxic, Low PH Water into Nearshore Marine Environments on the California Coast.” Continental Shelf Research 45 (2012): 108–115. Continental Shelf Research. Web.
 
-2.	Ryan, J. P. et al. “Causality of an Extreme Harmful Algal Bloom in Monterey Bay, California, during the 2014–2016 Northeast Pacific Warm Anomaly.” Geophysical Research Letters 44.11 (2017): 5571–5579. Geophysical Research Letters. Web.
+2.Ryan, J. P. et al. “Causality of an Extreme Harmful Algal Bloom in Monterey Bay, California, during the 2014–2016 Northeast Pacific Warm Anomaly.” Geophysical Research Letters 44.11 (2017): 5571–5579. Geophysical Research Letters. Web.
 
-3.	Timothy Pennington, J., and Francisco P. Chavez. “Seasonal Fluctuations of Temperature, Salinity, Nitrate, Chlorophyll and Primary Production at Station H3/M1 over 1989-1996 in Monterey Bay, California.” Deep-Sea Research Part II: Topical Studies in Oceanography 47.5–6 (2000): 947–973. Deep-Sea Research Part II: Topical Studies in Oceanography. Web.
+3.Timothy Pennington, J., and Francisco P. Chavez. “Seasonal Fluctuations of Temperature, Salinity, Nitrate, Chlorophyll and Primary Production at Station H3/M1 over 1989-1996 in Monterey Bay, California.” Deep-Sea Research Part II: Topical Studies in Oceanography 47.5–6 (2000): 947–973. Deep-Sea Research Part II: Topical Studies in Oceanography. Web.
 
 4. William J. Emery, Richard E. Thomson, Chapter 5 - Time-series Analysis Methods, Editor(s): William J. Emery, Richard E. Thomson, Data Analysis Methods in Physical Oceanography, Elsevier Science, 2001, Pages 371-567, ISBN 9780444507563, https://doi.org/10.1016/B978-044450756-3/50006-X.
+![image](https://user-images.githubusercontent.com/51756657/216740767-9aca26ab-3896-4610-aa04-3a09950e9efc.png)
+
