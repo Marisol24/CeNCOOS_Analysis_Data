@@ -39,4 +39,4 @@ Sources that have aided in the interpretations of this data:
 
 3.Timothy Pennington, J., and Francisco P. Chavez. “Seasonal Fluctuations of Temperature, Salinity, Nitrate, Chlorophyll and Primary Production at Station H3/M1 over 1989-1996 in Monterey Bay, California.” Deep-Sea Research Part II: Topical Studies in Oceanography 47.5–6 (2000): 947–973. Deep-Sea Research Part II: Topical Studies in Oceanography. Web.
 
-4.William J. Emery, Richard E. Thomson, Chapter 5 - Time-series Analysis Methods, Editor(s): William J. Emery, Richard E. Thomson, Data Analysis Methods in Physical Oceanography, Elsevier Science, 2001, Pages 371-567, ISBN 9780444507563, https://doi.org/10.1016/B978-044450756-3/50006-X.
+4.William J. Emery, Richard E. Thomson, Chapter 5 - Time-series Analysis Methods, Editor(s): William J. Emery, Richard E. Thomson, Data Analysis Methods in Physical Oceanography, Elsevier Science, 2001, Pages 371-567, ISBN 9780444507563. 
